@@ -770,6 +770,12 @@ section,
 }
 .equipe-fotos{
   width: 100%; /* Garante que a imagem ocupe a largura total da coluna */
-  height: 350px !important; /* Defina uma altura fixa (você pode ajustar este valor) */
+  height: 350px; /* Defina uma altura fixa (você pode ajustar este valor) */
   object-fit: cover; /* Garante que a imagem preencha o espaço sem ser distorcida, cortando o excesso */
+}
+
+.member img.equipe-foto { /* Torna o seletor muito específico */
+  width: 100%;       
+  height: 350px;     /* Agora este valor deve ser aplicado */
+  object-fit: cover; 
 }
