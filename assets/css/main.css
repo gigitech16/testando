@@ -750,7 +750,7 @@ section,
   display: block;
   width: 10
 
-.member-content{
+.equipe-fotos{
   width: 100%; /* Garante que a imagem ocupe a largura total da coluna */
   height: 350px; /* Defina uma altura fixa (você pode ajustar este valor) */
   object-fit: cover; /* Garante que a imagem preencha o espaço sem ser distorcida, cortando o excesso */
