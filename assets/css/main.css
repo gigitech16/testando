@@ -749,33 +749,19 @@ section,
 .hero .hero-waves {
   display: block;
   width: 10
-
-.member img {
-  width: 100%;       
-  height: 350px;     
-  object-fit: cover; 
-}
-
-.member {
-  /* ... mantenha os estilos existentes ... */
-  height: 100%; /* Novo: Força o contêiner a ocupar toda a altura da coluna */
-}
-
-.member-contents {
-  height: 100%; /* Permite que o conteúdo de texto se estique */
-  display: flex; /* Novo: Use display flex para alinhar o conteúdo */
-  flex-direction: column; 
-  justify-content: space-between; /* Alinha o conteúdo verticalmente */
-  /* ... outros estilos de padding, se houver ... */
-}
-.equipe-fotos{
-  width: 100%; /* Garante que a imagem ocupe a largura total da coluna */
-  height: 350px; /* Defina uma altura fixa (você pode ajustar este valor) */
-  object-fit: cover; /* Garante que a imagem preencha o espaço sem ser distorcida, cortando o excesso */
 }
 
 .member img.equipe-foto { /* Torna o seletor muito específico */
   width: 100%;       
   height: 350px;     /* Agora este valor deve ser aplicado */
   object-fit: cover; 
+}
+
+.gallery .gallery-item img {
+  transition: all ease-in-out 0.4s;
+  
+  /* NOVAS LINHAS PARA TAMANHO UNIFORME */
+  width: 100%;        /* Garante que a imagem preencha a largura da coluna */
+  height: 250px;      /* Define uma altura fixa para todas as fotos (ajuste este valor) */
+  object-fit: cover;  /* Essencial: preenche o espaço sem distorcer, cortando o excesso */
 }
