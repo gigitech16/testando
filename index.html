@@ -581,9 +581,12 @@
             </div>
 
           </div>
-
+            <div class="php-email-form">
+            <div class="sent-message" id="success-message">
+            Sua mensagem foi enviada com sucesso. Obrigado!
+            </div>
           <div class="col-lg-8">
-            <form action="https://formspree.io/f/mqaopbvg" method="post" class="formspree-form" data-aos="fade-up" data-aos-delay="200" data-formspree>
+            <form action="https://formspree.io/f/mqaopbvg" method="post" class="needs-validation" data-aos="fade-up" data-aos-delay="200" novalidate>
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -645,12 +648,30 @@
 
   <div id="preloader"></div>
 
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <script src="assets/js/main.js"></script>
+  <script>
+  // Verifica se o formulário foi submetido com sucesso via Formspree
+  document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const submitted = urlParams.get('submitted');
+    const successMessage = document.getElementById('success-message');
+
+    if (submitted === 'true' && successMessage) {
+      // Exibe a mensagem de sucesso
+      successMessage.style.display = 'block';
+
+      // Opcional: Remove a mensagem após 5 segundos
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+        // Remove o parâmetro 'submitted' da URL para que a mensagem não reapareça ao recarregar
+        history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+      }, 5000); 
+    }
+  });
+</script>
 
 </body>
 
